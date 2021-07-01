@@ -30,32 +30,32 @@ app = Flask(__name__)
 @app.route('/')
 def home():
 
-    entertainment=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=3f1c5843539f47bf90b3c062852e0dd5')
+    entertainment=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=eafd81ede8dd42ffa61e0d0adf6a869c')
     entertainment=entertainment.json()
     entertainment=entertainment["articles"]
     entertainment=pd.DataFrame(entertainment)
     entertainment["category"]=1
  
 
-    health=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=3f1c5843539f47bf90b3c062852e0dd5')
+    health=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=eafd81ede8dd42ffa61e0d0adf6a869c')
     health=health.json()
     health=health["articles"]
     health=pd.DataFrame(health)
     health["category"]=2
 
-    science=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=3f1c5843539f47bf90b3c062852e0dd5')
+    science=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=eafd81ede8dd42ffa61e0d0adf6a869c')
     science=science.json()
     science=science["articles"]
     science=pd.DataFrame(science)
     science["category"]=3
 
-    technology=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=3f1c5843539f47bf90b3c062852e0dd5')
+    technology=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=eafd81ede8dd42ffa61e0d0adf6a869c')
     technology=technology.json()
     technology=technology["articles"]
     technology=pd.DataFrame(technology)
     technology["category"]=3
  
-    business=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=3f1c5843539f47bf90b3c062852e0dd5')
+    business=requests.get('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=eafd81ede8dd42ffa61e0d0adf6a869c')
     business=business.json()
     business=business["articles"]
     business=pd.DataFrame(business)
